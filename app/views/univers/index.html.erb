@@ -1,0 +1,27 @@
+<h1>Listing univers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @univers.each do |univer| %>
+      <tr>
+        <td><%= univer.name %></td>
+        <td><%= univer.user %></td>
+        <td><%= link_to 'Show', univer %></td>
+        <td><%= link_to 'Edit', edit_univer_path(univer) %></td>
+        <td><%= link_to 'Destroy', univer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Univer', new_univer_path %>
