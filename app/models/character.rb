@@ -3,4 +3,5 @@ class Character < ActiveRecord::Base
   belongs_to :membership
   has_many :ownerships
   has_many :participations
+  has_many :relationships
 end
